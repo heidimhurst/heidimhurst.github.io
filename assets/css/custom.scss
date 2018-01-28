@@ -29,6 +29,16 @@ body {
   background-color: $gray;
 }
 
+.btn-outline {
+  color: $gray;
+  background-color: $white;
+}
+.btn-outline:hover{
+  color: $white;
+  background-color: $gray;
+}
+
+a,
 a:link{
   color: $gray;
 }

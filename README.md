@@ -1,4 +1,4 @@
-# Heidi M Hurst [![Build Status](https://github.com/heidimhurst/heidimhurst.github.io)](https://github.com/heidimhurst/heidimhurst.github.io)
+# Heidi M Hurst [![Build Status](https://travis-ci.org/github/heidimhurst/heidimhurst.github.io.svg?branch=master)](https://travis-ci.org/github/heidimhurst/heidimhurst.github.io)
 
 ![screenshot](assets/img/screenshot.png)
 

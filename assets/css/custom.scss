@@ -20,6 +20,22 @@ body {
   //background-size: 100%;
 }
 
+.btn {
+  color: $gray
+  background-color: $white
+}
+.btn:hover{
+  color: $white
+  background-color: $gray
+}
+
+a:link{
+  color: $gray
+}
+a:hover{
+  color: #009999
+}
+
 .logo {
   max-width: 280px;
 }

@@ -58,6 +58,7 @@ a:hover{
 }
 
 .gold-text {
+    // font-family:'Cambo','Times New Roman', Times, serif;
     color:#c3a343;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),
@@ -78,7 +79,12 @@ a:hover{
 }
 
 .img-border {
-  border: 5px solid $white;
+  border: 1px solid $white;
+  max-width: 100%;
+}
+
+.img-border:hover{
+  border: 1px solid $gold;
   max-width: 100%;
 }
 

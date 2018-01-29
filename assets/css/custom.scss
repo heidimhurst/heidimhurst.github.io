@@ -1,4 +1,7 @@
 // $blue: #2D86FB;
+$gold: #c3a343;
+$black: #000000;
+$dgray: #2b282d;
 
 body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -9,7 +12,7 @@ body {
 
 .page-header {
   width: 100%;
-  background-color: $gray;
+  background-color: $dgray;
   //-webkit-transition: background-image 0.6s ease-in-out 0s;
   //-moz-transition: background-image 0.6s ease-in-out 0s;
   //-o-transition: background-image 0.6s ease-in-out 0s;
@@ -27,6 +30,7 @@ body {
 .btn:hover{
   color: $white;
   background-color: $gray;
+  border-color: $gold;
 }
 
 .btn-outline {
@@ -34,9 +38,15 @@ body {
   background-color: $white;
 }
 .btn-outline:hover{
-  color: $white;
-  background-color: $gray;
+  border-color: $gold;
+  color: $gold;
   
+      -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../img/gold.jpg') repeat;
+    background: -o-linear-gradient($black, $black);
+    background-color: $black;
+    -webkit-background-clip: text;
 }
 
 a,
@@ -44,7 +54,16 @@ a:link{
   color: $gray;
 }
 a:hover{
-  color: #009999;
+  color: $gold;
+}
+
+.gold-text {
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../img/gold.jpg') repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
 }
 
 .logo {
@@ -54,6 +73,9 @@ a:hover{
 .fill-blue { fill: $blue; }
 .fill-gray { fill: $gray; }
 .fill-gray-light { fill: $gray-light; }
+.fill-gold {
+  fill:#c3a343;
+}
 
 .img-border {
   border: 5px solid $white;

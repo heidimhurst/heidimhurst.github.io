@@ -13,14 +13,14 @@ body {
 .page-header {
   width: 100%;
   background-color: $dgray;
-  //-webkit-transition: background-image 0.6s ease-in-out 0s;
-  //-moz-transition: background-image 0.6s ease-in-out 0s;
-  //-o-transition: background-image 0.6s ease-in-out 0s;
-  //transition: background-image 0.6s ease-in-out 0s;
-  //background-image: url('../img/sunset.png');
-  //background-repeat: no-repeat;
-  //background-position: center center;
-  //background-size: 100%;
+  -webkit-transition: background-image 0.6s ease-in-out 0s;
+  -moz-transition: background-image 0.6s ease-in-out 0s;
+  -o-transition: background-image 0.6s ease-in-out 0s;
+  transition: background-image 0.6s ease-in-out 0s;
+  background-image: url('../img/longs_header.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .btn {

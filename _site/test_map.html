@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Oxford Poetry Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGVpZGltaHVyc3QiLCJhIjoiY2pqZWpnZ2l3MnExYjN3cGxmcWh5YWI4NSJ9.sIH59NuzeyYj8oLePbLPbQ';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/heidimhurst/cjrdymxn01zlu2sofe675zrzl',
+    center: [-1.2475878,51.75504163],
+    zoom: 12
+});
+
+map.on('load', function() {
+        map.addLayer({
+            "id": "points",
+            "type": "symbol",
+            "source": {
+                "type": "geojson",
+                "data": {
+                    "type": "FeatureCollection",
+                    "features": [{
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-1.257132,51.752389]
+                        },
+                        "properties": {
+                            "description":"<b>Thyrsis</b> <br> \
+                            Matthew Arnold\
+                            <br> <i>\"...And that sweet city with her dreaming spires...\"</i> <br>  \
+                            This poem is the origin of Oxford's most prominent nickname - the \"City of Spires\" <br> \
+                            \
+                            <a href='https://www.poetryfoundation.org/poems/43608/thyrsis-a-monody-to-commemorate-the-authors-friend-arthur-hugh-clough' target='_blank'>Read on...</a>",
+                            "icon":"star"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-1.250132,51.772389]
+                        },
+                        "properties": {
+                            "description":"<b>Oxford</b> <br> \
+                            CS Lewis\
+                            <br> <i>\"...A refuge of the elect, a tower of dreams...\"</i> <br>  \
+                            insert description here  <br> \
+                            \
+                            <a href='https://www.inspirationalstories.com/poems/oxford-c-s-lewis-poems/' target='_blank'>Read on...</a>",
+                            "icon":"star"
+                        }
+                    }]
+                }
+            },
+            "layout": {
+                "icon-image": "{icon}-15",
+                "icon-allow-overlap": true
+            }
+        });
+
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'points', function (e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = e.features[0].properties.description;
+     
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+     
+    new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'points', function () {
+    map.getCanvas().style.cursor = 'pointer';
+    });
+     
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'points', function () {
+    map.getCanvas().style.cursor = '';
+    });
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,10 +1,8 @@
-# Heidi M Hurst [![Build Status](https://travis-ci.org/github/heidimhurst/heidimhurst.github.io.svg?branch=master)](https://travis-ci.org/github/heidimhurst/heidimhurst.github.io)
-
-![screenshot](assets/img/screenshot.png)
+# Heidi M Hurst 
 
 This site is a living portfolio and landing place for my work.
 
-The site is open source and adapted from [https://github.com/github/government.github.com](https://github.com/github/government.github.com) under the ISC license.
+The site is open source and adapted from [https://github.com/github/government.github.com](https://github.com/github/government.github.com) under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 
 ### Under the Hood
@@ -22,10 +20,9 @@ You can take all the files of this site and run them just on your computer as if
 #### Requirements
 
 * [Jekyll](http://jekyllrb.com/)
-* [Ruby](https://www.ruby-lang.org/en/)
+* [Ruby](https://www.ruby-lang.org/en/) (recommend installing via [rbenv](https://github.com/rbenv/rbenv#installing-ruby-versions))
 * [Git](http://git-scm.com/)
 
-_If you have installed [GitHub Desktop](https://desktop.github.com), Git was also installed automatically._
 
 To copy the repository's files from here onto your computer and to view and serve those files locally, at your computer's command line type:
 

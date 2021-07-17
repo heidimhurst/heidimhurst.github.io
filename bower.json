@@ -1,11 +1,11 @@
 {
-  "name": "government.github.com",
+  "name": "heidimhurst.github.com",
   "version": "0.0.1",
-  "homepage": "https://government.github.com/",
+  "homepage": "https://heidimhurst.github.io/",
   "authors": [
-    "GitHub, Inc."
+    "heidimhurst","GitHub, Inc."
   ],
-  "description": "Gather, curate, and feature stories of public servants and civic hackers using GitHub as part of their open government innovations",
+  "description": "personal website",
   "main": "index.html",
   "license": "MIT",
   "dependencies": {
